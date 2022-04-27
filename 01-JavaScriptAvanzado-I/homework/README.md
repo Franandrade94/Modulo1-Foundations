@@ -91,7 +91,7 @@ parseInt("09")//9
 2 && 5 // 5
 5 || 0 // 0
 0 || 5 // 5
-[3]+[3]-[10] //
+[3]+[3]-[10] //23 primero concaten los '3' (33) y despues le resta 10
 3>2>1//false
 [] == ![] // true
 ```
