@@ -93,7 +93,7 @@ parseInt("09")//9
 0 || 5 // 5
 [3]+[3]-[10] //23 primero concaten los '3' (33) y despues le resta 10
 3>2>1//false
-[] == ![] // true //el [] lo toma como str vacio por coercion de datos, string vacio = 0 
+[] == ![] // true //el [] lo toma como str vacio por coercion de datos, string vacio = 0
 ```
 
 > Si te quedó alguna duda repasá con [este artículo](http://javascript.info/tutorial/object-conversion).
