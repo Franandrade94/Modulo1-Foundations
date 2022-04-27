@@ -81,10 +81,10 @@ console.log(pm);//franco
 6 / "3" //2
 "2" * "3" //6
 4 + 5 + "px" //9px
-"$" + 4 + 5 // $9
+"$" + 4 + 5 // $45 no suma porque empieza con string
 "4" - 2 // 2
-"4px" - 2 // NaN
-7 / 0 //undefine
+"4px" - 2 // NaN no se puede restar un numero con un str
+7 / 0 //infinity
 {}[0]//undefine
 parseInt("09")//9
 5 && 2//2
@@ -170,6 +170,8 @@ function printing() {
    console.log(4);
 }
 
-printing();//1;4;3;2 PRIMERO EJECUTA LOS CONSOLE.LOG Y DESPUES LOS SETTIMEOUT EN EL OL ORDEN DE MILISEGUNDOS INDICADO
+//1;4;3;2 primero ejecuta los console.log y despues el setTimeout en el orden de milisegundos indicado
+
+printing();//undefined
 ```
 

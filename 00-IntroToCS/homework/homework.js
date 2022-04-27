@@ -13,7 +13,7 @@ function BinarioADecimal(num) {
   }
 
   return decimal;
-  // algo
+  //algo
 }
 console.log( BinarioADecimal('101011'))
 
