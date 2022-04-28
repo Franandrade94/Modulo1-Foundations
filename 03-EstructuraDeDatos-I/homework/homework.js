@@ -4,10 +4,19 @@
 // de forma iterativa pero esto último no es obligatorio.
 
 function nFactorial(n) {
+
+  if( n > -1 && n < 2)
+  {return 1}
+ 
+  if (n < 0) 
+  {return 0}
+
+  return n * nFactorial (n-1)
   // devolvé el factorial de n (n!)
   // ej:
   // el factorial de 3 es 6 (3 * 2 * 1)
 }
+console.log (nFactorial(5))
 
 function nFibonacci(n) {
   // Secuencia de Fibonacci: 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144,…
@@ -16,7 +25,19 @@ function nFibonacci(n) {
   // nFibonacci(1) // 1 // el elemento 1 es 1
   // nFibonacci(6) // 1 // el elemento 6 es 8
 
+  var Fibonacci = [];
+
+  Fibonacci [0] = 0;
+  Fibonacci [1] = 1;
+
+  for ( var i = 2; i < n; i++) {
+
+    Fibonacci[i] = Fibonacci [i-2] + Fibonacci[i-1]
+  }
+
+  return Fibonacci.pop(); 
 }
+console.log( nFibonacci (7));
 
 // Para esta parte no es necesario utilizar recursión.
 // Implementa la clase Queue que debe contener los siguientes métodos:
