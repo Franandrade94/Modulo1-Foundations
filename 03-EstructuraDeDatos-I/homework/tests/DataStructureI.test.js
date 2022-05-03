@@ -36,22 +36,22 @@ describe('Un queue', function() {
     queue = new Queue();
   });
 
-  it('tiene los metodos `enqueue`, `dequeue`, y `size`', function() {
+  xit('tiene los metodos `enqueue`, `dequeue`, y `size`', function() {
     expect(typeof queue.enqueue).toBe('function');
     expect(typeof queue.dequeue).toBe('function');
     expect(typeof queue.size).toBe('function');
   });
 
-  it('tiene size 0 inicialmente', function() {
+  xit('tiene size 0 inicialmente', function() {
     expect(queue.size()).toBe(0);
   });
 
-  it('incrementa en size cuando agregamos items', function() {
+  xit('incrementa en size cuando agregamos items', function() {
     queue.enqueue('first in line');
     expect(queue.size()).toBe(1);
   });
 
-  it('decrementa en size cuando removemos elementos', function() {
+  xit('decrementa en size cuando removemos elementos', function() {
     queue.enqueue('first');
     queue.enqueue('second');
     queue.enqueue('third');
@@ -59,7 +59,7 @@ describe('Un queue', function() {
     expect(queue.size()).toBe(2);
   });
 
-  it('devuelve el item correcto cuando dequeeamos', function() {
+  xit('devuelve el item correcto cuando dequeeamos', function() {
     queue.enqueue('first');
     queue.enqueue('second');
     queue.enqueue('third');
@@ -72,7 +72,7 @@ describe('Un queue', function() {
     expect(queue.size()).toBe(0);
   });
 
-  it('maneja bien el underflow, cuando no hay elementos dequeue devuelve undefined', function() {
+  xit('maneja bien el underflow, cuando no hay elementos dequeue devuelve undefined', function() {
     queue.enqueue('first in line');
     expect(queue.size()).toBe(1);
     expect(queue.dequeue()).toBe('first in line');
@@ -83,7 +83,7 @@ describe('Un queue', function() {
     expect(queue.size()).toBe(0);
   });
 
-  it('maneja bien varios enqueue y dequeue', function(){
+  xit('maneja bien varios enqueue y dequeue', function(){
     queue.enqueue(1);
     expect(queue.dequeue()).toBe(1);
     queue.enqueue(2);
@@ -95,7 +95,7 @@ describe('Un queue', function() {
     expect(queue.dequeue()).toBe(undefined);
   });
 
-  it('agrega y remueve sus propios items', function(){
+  xit('agrega y remueve sus propios items', function(){
     var q2 = new Queue();
     queue.enqueue('fullstack');
     q2.enqueue('JavaScript');

@@ -102,7 +102,7 @@ let textoAsteriscos = crearCadena.bind(this, '*', '*');
 
 let textoGuiones = crearCadena.bind(this, '-', '-');
 
-let textoUnderscore = crearCadena.bind([], '_', '_');
+let textoUnderscore = crearCadena.bind([ ], '_', '_');
 
 
 

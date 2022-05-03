@@ -3,7 +3,7 @@
 // usando recursión. Una vez realizadas de esa forma pueden probar hacerlas
 // de forma iterativa pero esto último no es obligatorio.
 
-function nFactorial(n) {
+function nFactorial(n){
 
   if( n > -1 && n < 2)
   {return 1}
@@ -25,19 +25,13 @@ function nFibonacci(n) {
   // nFibonacci(1) // 1 // el elemento 1 es 1
   // nFibonacci(6) // 1 // el elemento 6 es 8
 
-  var Fibonacci = [];
-
-  Fibonacci [0] = 0;
-  Fibonacci [1] = 1;
-
-  for ( var i = 2; i < n; i++) {
-
-    Fibonacci[i] = Fibonacci [i-2] + Fibonacci[i-1]
+  if ( n < 2) {
+  
+    return n;
   }
-
-  return Fibonacci.pop(); 
+  return nFibonacci(n-1) + nFibonacci(n-2);
 }
-console.log( nFibonacci (7));
+console.log(nFibonacci(6));
 
 // Para esta parte no es necesario utilizar recursión.
 // Implementa la clase Queue que debe contener los siguientes métodos:
