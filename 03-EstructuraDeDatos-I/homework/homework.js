@@ -42,25 +42,25 @@ console.log(nFibonacci(7));
 // size: Devuelve el número de elementos que contiene la queue.
 
 function Queue() { 
-
-  this.array = []
   
+  this.array = []  
+
 }
 
   Queue.prototype.enqueue = function (data) {
-
+  
     this.array.push(data);
   }
 
   Queue.prototype.dequeue = function (data) {
-
+  
     return this.array.shift(data);
-
   }
+  
   Queue.prototype.size = function (data) {
-
+  
     return this.array.length;
-  }
+}
 
   var queue1 = new Queue ();
   queue1.enqueue('Carli1');
@@ -69,8 +69,6 @@ function Queue() {
   queue1.enqueue('Carli3');
   console.log (queue1.size());
   queue1.enqueue('Carli4');
-  queue1.dequeue();
-  queue1.dequeue();
   queue1.dequeue();
   queue1.dequeue();
   console.log (queue1.size())
