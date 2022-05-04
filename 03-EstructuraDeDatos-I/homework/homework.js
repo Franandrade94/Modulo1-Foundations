@@ -5,11 +5,12 @@
 
 function nFactorial(n){
 
-  if( n > -1 && n < 2)
+  if( n > 0 && n < 2)
   {return 1}
  
-  if (n < 0) 
-  {return 0}
+  if (n < 0){
+    return 0;
+  }
 
   return n * nFactorial (n-1)
   // devolvé el factorial de n (n!)
@@ -24,14 +25,15 @@ function nFibonacci(n) {
   // nFibonacci(0) // 0  // el elemento 0 es cero
   // nFibonacci(1) // 1 // el elemento 1 es 1
   // nFibonacci(6) // 1 // el elemento 6 es 8
-
-  if ( n < 2) {
   
+  if (n < 2){
     return n;
   }
-  return nFibonacci(n-1) + nFibonacci(n-2);
+  
+  return nFibonacci(n - 1) + nFibonacci(n - 2);
+
 }
-console.log(nFibonacci(6));
+console.log(nFibonacci(7));
 
 // Para esta parte no es necesario utilizar recursión.
 // Implementa la clase Queue que debe contener los siguientes métodos:
@@ -39,10 +41,40 @@ console.log(nFibonacci(6));
 // dequeue: Remueve un valor de la queue. Obedece a FIFO y respeta el underflow (devuelve undefined cuando la queue tiene size cero, o sea, cuando no tiene ningún elemento).
 // size: Devuelve el número de elementos que contiene la queue.
 
-function Queue() {
+function Queue() { 
 
+  this.array = []
+  
 }
 
+  Queue.prototype.enqueue = function (data) {
+
+    this.array.push(data);
+  }
+
+  Queue.prototype.dequeue = function (data) {
+
+    return this.array.shift(data);
+
+  }
+  Queue.prototype.size = function (data) {
+
+    return this.array.length;
+  }
+
+  var queue1 = new Queue ();
+  queue1.enqueue('Carli1');
+  console.log (queue1.size());
+  queue1.enqueue('Carli2');
+  queue1.enqueue('Carli3');
+  console.log (queue1.size());
+  queue1.enqueue('Carli4');
+  queue1.dequeue();
+  queue1.dequeue();
+  queue1.dequeue();
+  queue1.dequeue();
+  console.log (queue1.size())
+  console.log (queue1)
 // No modifiquen nada debajo de esta linea
 // --------------------------------
 
