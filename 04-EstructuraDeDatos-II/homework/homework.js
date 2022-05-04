@@ -12,9 +12,31 @@
 
 function LinkedList() {
 
+  this.head = null;
+  this._length = 0;
+
 }
 
+LinkedList.prototype.add()
+{
+
+
+};
+
+LinkedList.prototype.remove()
+{
+
+};
+
+LinkedList.prototype.search()
+{
+
+};
+
 function Node(value){
+
+  this.value = value;
+  this.next = null;
 
 }
 
